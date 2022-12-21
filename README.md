@@ -26,4 +26,4 @@ A e-commerce website for all merchandise and products with features and Assessib
 - CSS (styling the app)
 - Node (npm)
 - Visual Studio Code (JavaScript IDE)
-- Senamatic UI for css and design pattern
+- Semantic UI for css and design pattern
