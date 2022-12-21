@@ -67,7 +67,7 @@ const ProductDetail = () => {
           </div>
         </div>
       )}
-      <SliderListing />
+      {/* <SliderListing /> */}
     </div>
   );
 };

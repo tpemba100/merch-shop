@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const ProductComponent = () => {
+  // the path to the products data
   const products = useSelector((state) => state.allProducts.products);
 
-  // console.log("ay yooo  " + updatedFilter);
   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product;
 
