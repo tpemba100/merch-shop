@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/product/:productId" exact element={<ProductDetail />} />
           <Route path="/shop" exact element={<ProductListing />} />
-          <Route path="/about" exact element={<About />} />
+          <Route path="/category" exact element={<About />} />
           <Route path="/contact" exact element={<Contact />} />
           <Route> 404 Not Found </Route>
         </Routes>

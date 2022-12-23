@@ -30,8 +30,24 @@ const Contact = () => {
             service. If you have any questions or concerns, please don't
             hesitate to
             <div className="ui align center segment">
-              <a href="/contact">contact us</a>. We are always happy to help. ui
-              segment a
+              <div class="ui icon message">
+                <i class="inbox icon"></i>
+                <div class="content">
+                  <div class="header">Contact Us and Get more info.</div>
+                  <p>Subscribe for our new deals and items.</p>
+                  <div class="ui form success">
+                    <div class="field">
+                      <label>E-mail</label>
+                      <input type="email" placeholder="joe@schmoe.com" />
+                    </div>
+                    <div class="ui success message">
+                      <div class="header">Form Completed</div>
+                      <p>You're all signed up for the newsletter.</p>
+                    </div>
+                    <div class="ui submit button">Submit</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </p>
         </div>
@@ -41,7 +57,7 @@ const Contact = () => {
             experience and find exactly what you're looking for.
           </p>
         </div>
-        <div class="ui segment">
+        {/* <div class="ui segment">
           <p>
             We are a small team of passionate individuals who are dedicated to
             bringing you high-quality products at affordable prices. Our goal is
@@ -55,7 +71,7 @@ const Contact = () => {
             Thank you for choosing to shop with us. We hope you have a great
             experience and find exactly what you're looking for.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
