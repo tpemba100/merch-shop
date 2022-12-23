@@ -16,10 +16,11 @@ const Header = () => {
           <a class="item">Shop</a>
         </Link>
         <Link to={"/about"}>
-          <a class="item">About</a>
+          <a class="item">Categories</a>
+          {/* try addding a drop down */}
         </Link>
         <Link to={"/contact"}>
-          <a class="item">Contact</a>
+          <a class="item">Contact Us</a>
         </Link>
       </div>
 
