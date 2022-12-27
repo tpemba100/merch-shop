@@ -88,6 +88,7 @@
 .ui.grid > .row > img {
   height: 100%;
 }
+
 /* spacer in header */
 .ui.placeholder .header:not(:first-child):before,
 .ui.placeholder .image:not(:first-child):before,
@@ -120,4 +121,10 @@
 
 .about.ui.header {
   margin-top: 45px;
+}
+
+/* Search Container */
+.ui.search .results {
+  display: flex;
+  background-color: #ff3e6c;
 }

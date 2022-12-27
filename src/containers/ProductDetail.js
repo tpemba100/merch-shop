@@ -6,7 +6,6 @@ import {
   selectedProducts,
   removeSelectedProducts,
 } from "../redux/actions/productActions";
-import SliderListing from "./SliderListing";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);

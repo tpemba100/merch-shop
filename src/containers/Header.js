@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Header = () => {
+const Header = (e) => {
+  const [search, setSearch] = useState("Random");
+  // const [searchList, setSearchList] = useState([]);
+  const products = useSelector((state) => state.allProducts.products);
+  const mapProduct = Object.entries(products);
+
+  console.log(search);
+  // console.log(products);
+  // console.log(mapProduct);
+
+  // const handleSubmit = () => {
+  //  setSearch()
+  // };
+
   return (
     // semantic UI
     <div class="ui fixed menu">
@@ -26,9 +40,25 @@ const Header = () => {
 
       <div class="right menu">
         <div class="item">
-          <div class="ui icon input">
-            <input type="text" placeholder="Search..." />
-            <i class="search link icon"></i>
+          <div class="ui search">
+            <div class="ui icon input">
+              <input
+                class="prompt"
+                type="text"
+                placeholder="Search countries..."
+                onChange={(e) => setSearch(e.target.value)}
+                // onChange={handleSubmit}
+              />
+              <i class="search icon"></i>
+            </div>
+            <div class="results" style={{ display: "block" }}>
+              {mapProduct.map(
+                (product) => (
+                  <div>{product[1].title}</div>
+                )
+                // console.log(product[1].title)
+              )}
+            </div>
           </div>
         </div>
         <div class="item">
@@ -38,6 +68,7 @@ const Header = () => {
         </div>
         <a class="ui item">Logout</a>
       </div>
+
       {/* <div class="ui secondary  menu">
         <div class="right menu aligned center">
           <div class="ui icon input">
