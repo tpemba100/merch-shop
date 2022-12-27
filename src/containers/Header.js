@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = (e) => {
   const [search, setSearch] = useState("Random");
-  // const [searchList, setSearchList] = useState([]);
   const products = useSelector((state) => state.allProducts.products);
   const mapProduct = Object.entries(products);
 
-  console.log(search);
-  // console.log(products);
-  // console.log(mapProduct[1]);
-
-  // const handleSubmit = () => {
-  //  setSearch()
+  // const handleSubmit = (e) => {
+  //   setSearch(e.target.value);
+  //   console.log(mapProduct[1][1].title);
   // };
 
   return (

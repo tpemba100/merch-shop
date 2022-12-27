@@ -126,5 +126,6 @@
 /* Search Container */
 .ui.search .results {
   display: flex;
-  background-color: #ff3e6c;
+  font-size: 16px;
+  background-color: aliceblue;
 }
