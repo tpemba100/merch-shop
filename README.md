@@ -14,7 +14,7 @@ A e-commerce website for all merchandise and products with features and Assessib
 - 
 
 ## Need to Add project GIF
-![alt text](img/todoapp.gif)
+![caption](img/todoapp.gif)
 
 ![alt text](https://github.com/tpemba100/todo-app/blob/master/img/7.png?raw=true)
 
