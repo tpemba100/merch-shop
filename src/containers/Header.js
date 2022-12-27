@@ -10,7 +10,7 @@ const Header = (e) => {
 
   console.log(search);
   // console.log(products);
-  // console.log(mapProduct);
+  // console.log(mapProduct[1]);
 
   // const handleSubmit = () => {
   //  setSearch()
@@ -52,12 +52,16 @@ const Header = (e) => {
               <i class="search icon"></i>
             </div>
             <div class="results" style={{ display: "block" }}>
-              {mapProduct.map(
-                (product) => (
-                  <div>{product[1].title}</div>
-                )
-                // console.log(product[1].title)
-              )}
+              {mapProduct
+                // .filter((product) => {
+                //   product[1].title.toLowerCase().includes(search);
+                // })
+                .map(
+                  (product, index) => (
+                    <div key={index}>{product[1].title}</div>
+                  )
+                  // console.log(product[1].title);
+                )}
             </div>
           </div>
         </div>
