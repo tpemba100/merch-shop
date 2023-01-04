@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productActions";
+import { setProducts, setProductsCopy } from "../redux/actions/productActions";
 import ProductComponent from "./ProductComponent";
 
 const ProductListing = () => {
   const [data, setData] = useState([]); //This is the stored products State
 
   const products = useSelector((state) => state); // Getting the products data from store
+  const productsCopy = useSelector((state) => state.allProductsCopy); // Getting the products data from store
   const dispatch = useDispatch();
 
   //Filter Component
@@ -15,10 +16,12 @@ const ProductListing = () => {
   // --> filtered data is in curentList
   // --> disptach the filter data to store products
   const filterProduct = (cat) => {
+    setData(productsCopy);
     const currentList = data.allProducts.products.filter(
       (x) => x.category === cat
     );
-    console.log("this is filtered producta : " + currentList);
+    console.log("Saved data inside filter : ", data);
+    console.log(currentList);
     dispatch(setProducts(currentList));
   };
 
@@ -33,6 +36,7 @@ const ProductListing = () => {
         console.log("Err", err);
       });
     dispatch(setProducts(response.data));
+    dispatch(setProductsCopy(response.data));
     setData(products);
   };
 
@@ -81,3 +85,10 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
+
+// ISSUE: ProductListing components doesnt save the State & doesnt filter the data
+//          only works if i re fetch the data API
+
+// Solution 1: is to use the copy of the data for filtering data. make a copy? --> allProductCopy
+
+// Solution 2: set the state of PL Component to the allProductCopy everytime filter component is called.
