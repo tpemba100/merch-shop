@@ -21,7 +21,7 @@ const Header = (e) => {
     <div class="ui fixed menu">
       <div class="ui secondary menu">
         <Link to={"/"}>
-          <h2>The One Shop</h2>
+          <h2 class="headder">The One Shop</h2>
         </Link>
         <Link to={"/"}>
           <a class="item ">Home</a>
@@ -51,7 +51,7 @@ const Header = (e) => {
               />
               <i class="search icon"></i>
             </div>
-            <div class="results" style={{ display: "block" }}>
+            {/* <div class="results" style={{ display: "block" }}>
               {mapProduct
                 // .filter((product) => {
                 //   product[1].title.toLowerCase().includes(search);
@@ -62,7 +62,7 @@ const Header = (e) => {
                   )
                   // console.log(product[1].title);
                 )}
-            </div>
+            </div> */}
           </div>
         </div>
         <div class="item">

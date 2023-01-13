@@ -19,7 +19,9 @@ const Home = () => {
             height: "auto",
           }}
         >
-          <h1 style={{ float: "right" }}>Welcome to The One Shop</h1>
+          <h1 class="hero-txt" style={{ float: "right" }}>
+            Welcome to The One Shop
+          </h1>
         </div>
       </div>
 

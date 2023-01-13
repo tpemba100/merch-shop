@@ -49,6 +49,10 @@
 }
 
 /* Menu Header*/
+
+.headder {
+  padding-left: 20px;
+}
 .ui.menu.fixed {
   height: 60px;
   padding-top: 15px;
@@ -64,7 +68,13 @@
   margin-top: 45px;
 }
 
-/* .nav-bar {} */
+/* HERO */
+
+.hero-txt {
+  padding-bottom: 300px;
+  padding-right: 200px;
+  font-size: 40px;
+}
 
 /* Product Detail */
 /* Product Detail */
